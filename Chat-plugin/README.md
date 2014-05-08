@@ -11,7 +11,7 @@ HTML чат без серверной части работать не буде�
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://comet-server.ru/CometServerApi.js&quot; &gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;https://comet-server.ru/doc/html_chat.js&quot; &gt;&lt;/script&gt;
 &lt;link   type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://comet-server.ru/doc/html_chat.css&quot;&gt;&lt;/link&gt;
-<pre>
+</pre>
 
 Осталось настроить сам чат и запустить, для этого пишем небольшой скрипт.
 <pre>
@@ -28,7 +28,6 @@ HTML чат без серверной части работать не буде�
 .html-chat-js-answer a:hover{ color: #338;font-size: 12px; font-family: cursive;}
 .html-chat-msg{ margin: 0px; }
 &lt;/style&gt;
-
 &lt;script&gt;
 
    /**
@@ -44,4 +43,4 @@ HTML чат без серверной части работать не буде�
        htmljs_Chat_Init( $(&quot;#html-chat&quot;) )
     });
 &lt;/script&gt;
-<pre>
+</pre>
