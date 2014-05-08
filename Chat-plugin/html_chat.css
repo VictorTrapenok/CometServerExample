@@ -1,0 +1,10 @@
+.holder-html-chat{ border: 1px solid #ccc;padding:10px;background-color: #fff;width: 600px;}
+.html-chat-history{ max-width: 600px; overflow: auto;max-height: 900px; border: 1px solid #ccc;padding: 5px;}
+.html-chat-js-name{ margin-top:10px; }
+.html-chat-js-input{ max-width: 600px;max-height: 100px;width: 600px;margin-top:10px; }
+.html-chat-js-button-holder{ margin-bottom: 0px;margin-top: 10px; }
+.html-chat-js-button-holder input{ width: 220px; }
+.html-chat-js-answer{ float:right; }
+.html-chat-js-answer a{ color: #F55;font-size: 12px; font-family: cursive;}
+.html-chat-js-answer a:hover{ color: #338;font-size: 12px; font-family: cursive;}
+.html-chat-msg{ margin: 0px; }
