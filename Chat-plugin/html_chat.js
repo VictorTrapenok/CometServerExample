@@ -23,7 +23,7 @@ function web_send_msg()
     htmljs_Chat_masgArray[randomId] = true;
     
     // Отправка сообщения в канал чата
-    CometServer().web_pipe_send("web_chat_pipe", {"text":text, "name":name, "randomId":randomId});
+    CometServer().web_pipe_send("web_chat_pipe.msg", {"text":text, "name":name, "randomId":randomId});
     
     // Уведомим остальные вкладки о том что мы добавили сообщение в чат
     comet_server_signal().send_emit("AddToChat", {"text":text, "name":name, "randomId":randomId});
@@ -47,8 +47,14 @@ function htmljs_Chat_Init( holder )
     $(holder).html(html);
 
     // Подписываемся на канал в который и будут отпавлятся сообщения чата. 
-    CometServer().subscription("web_chat_pipe", function(msg){
+    CometServer().subscription("web_chat_pipe.msg", function(msg){
         console.log(["msg", msg]);
+        
+        if(!msg.data.randomId)
+        {
+            // Сообщение какоето не правильное, не имеющие randomId
+            return;
+        }
         
         msg.data.randomId = ""+msg.data.randomId;
         msg.data.randomId.replace(/[^0-9]/img, "");
